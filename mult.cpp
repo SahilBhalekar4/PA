@@ -1,19 +1,18 @@
-#include<xc.h>
-#include<stdio.h>
-#include<stdlib.h>
-#include<pic18f4550.h>
+#include <xc.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <pic18f4550.h>
+
 void main (void) {
-    int mult = 0x00;
-    int div = 0x00;
-    int a = 0x03;
-    int b = 0x04;
-
-    mult = a*b;
-    div = b/a;
-
-    TRISD=0;
-    PORTD=multi;
-    TRISB=0;
-    PORTB=div;
-    return ;
+  int a ,b ,mul,div;
+  a = 0x08;
+  b = 0x02;
+  mul = a*b;
+  TRISD = 0x00;
+  PORTD = mul;
+   
+  div = a/b;
+  TRISB = 0x00;
+  PORTB = div;
+  return ;
 }
